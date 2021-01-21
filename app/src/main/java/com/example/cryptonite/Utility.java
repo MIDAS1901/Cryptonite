@@ -46,17 +46,21 @@ public class Utility {
                 updated_index = alphabet.indexOf(ciphertext.charAt(index)) - decryptionKey;
                 if(updated_index<0){
                     final_index = updated_index + alphabet.length();
-                    else{
-                        final_index = updated_index;
-                    }
-                    plaintext = alphabet.substring(final_index, final_index + 1);
-                    finaltext += plaintext;
                 }
+                else{
+                    final_index = updated_index;
+                }
+                plaintext = alphabet.substring(final_index, final_index + 1);
+                finaltext += plaintext;
+
             }
-            return finaltext;
         }
+        return finaltext;
     }
 
+    private static void reset(){
+        finaltext = "";
+    }
 
 
 }
