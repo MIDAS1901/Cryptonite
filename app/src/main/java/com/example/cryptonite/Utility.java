@@ -12,7 +12,7 @@ public class Utility {
     private static String ciphertext;
     private static String finaltext;
 
-    public static String encrypt(String plaintext, int encryptionKey){
+    public static String encrypt1(String plaintext, int encryptionKey){
 
         reset();
         plaintext = plaintext.toUpperCase();
@@ -36,7 +36,7 @@ public class Utility {
         return finaltext;
     }
 
-    public static String decrypt(String ciphertext, int decryptionKey){
+    public static String decrypt1(String ciphertext, int decryptionKey){
         reset();
         ciphertext = ciphertext.toUpperCase();
         for(index=0;index<ciphertext.length();index++){
